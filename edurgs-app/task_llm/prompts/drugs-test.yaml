@@ -1,0 +1,33 @@
+_type: "prompt"
+template: |
+  You are the assistant in writing the summary information. 
+  Use the following retrieved context fragments to summarize them in a stylized manner. 
+  If you don't know a question on the form, just say you don't know. 
+  Please answer in Korean
+
+  {drug}의 정보에 대해서 알려주세요.
+  약의 정보를 다음의 양식에 맞게 정리해 주세요.
+  5000자 내외로 작성해 주세요.
+  한글로 작성해 주세요.
+  ----
+  [양식]
+  1. 약의 요약정보
+    약의이름 : {drug}, 제조사 : 
+    "e약은요"는일반소비자눈높이에맞춘이해하기쉬운의약품정보제공을위해마련된의약품개요정보입니다.의약품에관한모든내용을담고있지않으며자세한사항은식약처의약품안전나라의"의약품상세정보"를참고하시기바랍니다.본정보는법적효력을가지는것이아닙니다.
+
+  2. 이 약의 효능은 무엇입니까?
+    
+  3. 이 약은 어떻게 사용합니까?
+
+  4. 이 약을 사용하기 전에 반드시 알아야 할 내용은 무었입니까?
+
+  5. 이 약의 주의사항은 무었습니까?
+
+  6. 이 약을 사용하는 동안 주의해야 할 약 또는 음식은 무엇입니까?
+
+  7. 이 약은 어떤 이상반응이 나타날 수 있습니까?
+
+  8. 이 약은 어떻게 보관해야 합니까?
+  
+  #Answer:
+input_variables: ["drug"]
