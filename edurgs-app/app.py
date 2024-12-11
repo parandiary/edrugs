@@ -4,8 +4,6 @@ import sys
 import threading
 import time
 import streamlit as st
-
-from langchain_teddynote import logging
 # try:
 #     from langchain_teddynote import logging
 # except ModuleNotFoundError as e:
