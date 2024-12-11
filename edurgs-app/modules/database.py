@@ -13,7 +13,7 @@ DB_CONFIG = {
 def get_db_connection():
     """데이터베이스 연결을 생성합니다."""
     try:
-        return psycopg2.connect(**DB_CONFIG)
+        return psycopg2.connect(**st.secrets["postgresql"])
     except Exception as e:
         st.error(f"데이터베이스 연결에 실패했습니다: {e}")
         return None
