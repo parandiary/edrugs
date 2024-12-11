@@ -5,14 +5,12 @@ import threading
 import time
 import streamlit as st
 
-try:
-    from langchain_teddynote import logging
-    # This block executes only on the first run when your package isn't installed
-except ModuleNotFoundError as e:
-    subprocess.Popen([f'{sys.executable} -m pip install git+https://${{GITHUB_TOKEN}}@github.com/teddylee777/langchain-teddynote.git'], shell=True)
-    #   subprocess.Popen([f'{sys.executable} -m pip install git+https://${{GITHUB_TOKEN}}@github.com/parandiary/edrugs.git'], shell=True)
-    # wait for subprocess to install package before running your actual code below
-    time.sleep(90)
+from langchain_teddynote import logging
+# try:
+#     from langchain_teddynote import logging
+# except ModuleNotFoundError as e:
+#     subprocess.Popen([f'{sys.executable} -m pip install git+https://${{GITHUB_TOKEN}}@github.com/teddylee777/langchain-teddynote.git'], shell=True)
+#     time.sleep(90)
 from langchain_ollama import ChatOllama
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
