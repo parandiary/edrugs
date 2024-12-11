@@ -2,6 +2,8 @@ import os
 import sys
 import time
 
+import psycopg2
+
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.database import get_task, save_task_answer, update_task_status
@@ -21,11 +23,13 @@ from langchain.schema import Document
 # 진행 상태 변수
 llm_running = False
 
+
 def run_task():
     while True:
         print("🚀 작업이 실행 중...")
         # 작업 대상 목록 조회
         task_list = get_task()
+        print("작업 대상 목록:", len(task_list))
         # print("작업 대상 목록:", task_list)
 
         # task_list가 비어있지 않은 경우에만 작업 수행
