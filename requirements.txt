@@ -153,6 +153,7 @@ langchain-text-splitters==0.2.2 ; python_version >= "3.11" and python_version < 
 langchain-upstage==0.1.8 ; python_version >= "3.11" and python_version < "3.12"
 langchain==0.2.15 ; python_version >= "3.11" and python_version < "3.12"
 langchainhub==0.1.21 ; python_version >= "3.11" and python_version < "3.12"
+langchain-ollama==0.0.37 ; python_version >= "3.11" and python_version < "3.12"
 langdetect==1.0.9 ; python_version >= "3.11" and python_version < "3.12"
 langgraph==0.0.69 ; python_version >= "3.11" and python_version < "3.12"
 langsmith==0.1.108 ; python_version >= "3.11" and python_version < "3.12"
